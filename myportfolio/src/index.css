@@ -1,0 +1,145 @@
+/* Tailwind base styles */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+
+/* Custom styles for SpacemanCanvas */
+html,
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden; /* Prevent horizontal scrollbars */
+}
+
+#root {
+  width: 100%;
+  height: 100%;
+}
+
+/* Ensure the canvas is touch-responsive */
+.touch-responsive {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+canvas {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+  pointer-events: auto; /* Ensure the canvas can handle touch events */
+}
+
+/* Glowing Text Animation */
+.glowing-text {
+  animation: glow 2s infinite alternate;
+}
+
+@keyframes glow {
+  0% {
+    text-shadow: 0 0 5px #f9d423, 0 0 10px #f9d423, 0 0 20px #f9d423, 0 0 30px #f9d423;
+  }
+  100% {
+    text-shadow: 0 0 10px #f9d423, 0 0 20px #f9d423, 0 0 40px #f9d423, 0 0 60px #f9d423;
+  }
+}
+
+/* Parallax container */
+.parallax {
+  position: relative;
+  height: 100vh; /* Full viewport height */
+  overflow: hidden; /* Prevent scrolling inside the parallax */
+  display: grid;
+  grid-template-areas: "stack";
+}
+
+.parallax > * {
+  grid-area: stack;
+}
+
+.parallax > img {
+  width: 100%;
+}
+
+.parallax__stars {
+  z-index: 2;
+}
+
+.parallax__planets {
+  z-index: 3;
+}
+
+.parallax__sun {
+  z-index: 4;
+}
+
+.parallax__mountain1 {
+  z-index: 5;
+}
+
+.parallax__mountain2 {
+  z-index: 6;
+}
+
+.parallax__crater {
+  z-index: 7;
+}
+
+.parallax__content {
+  z-index: 8;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+/* Description Box */
+.description-box {
+  height: auto;
+  padding: 2rem;
+  background-color: #011825;
+  text-align: center;
+  color: #fff;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.description-title {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.description-text {
+  font-size: 1.2rem;
+  line-height: 1.6;
+}
+
+
+/* Animation for rotating text */
+@keyframes textRotate1 {
+  0% {
+    transform: rotateX(0deg);
+    opacity: 1;
+  }
+  50% {
+    transform: rotateX(45deg);
+    opacity: 0.8;
+  }
+  100% {
+    transform: rotateX(0deg);
+    opacity: 1;
+  }
+}
+
+.animate-textRotate1 {
+  animation: textRotate1 2s infinite ease-in-out;
+}
