@@ -2,6 +2,8 @@ import React from "react";
 import SpacemanCanvas from "./components/Spaceman";
 import Position from "./components/Position";
 
+import Header from "./components/Header";
+
 import Stars from "./assets/background/1Stars.svg";
 import Planets from "./assets/background/2Planets.svg";
 import MountainFar from "./assets/background/3Mountain.svg";
@@ -12,6 +14,8 @@ import Sun from "./assets/background/6Sun.svg";
 export default function Home() {
   return (
     <div className="home-container">
+      <Header />
+
       <div className="parallax">
         {/* Background Layers */}
         <img src={Stars} alt="stars" className="parallax__stars" />
