@@ -4,6 +4,8 @@ import Position from "./components/Position";
 import Projects from "./components/Projects.jsx";
 
 
+import Contact from "./components/Contact.jsx";
+
 import StarsCanvas from "./components/StarsCanvas";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
@@ -74,6 +76,10 @@ export default function Home() {
       </div>
       <div>
       <Projects />
+      </div>
+
+      <div>
+        <Contact />
       </div>
 
 
