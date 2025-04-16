@@ -1,6 +1,7 @@
 import React from "react";
 import { IoHeart } from "react-icons/io5";
 
+
 const Footer = () => {
   return (
 <footer className="mt-auto bg-primary">

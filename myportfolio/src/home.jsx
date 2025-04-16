@@ -2,6 +2,7 @@ import React from "react";
 import SpacemanCanvas from "./components/Spaceman";
 import Position from "./components/Position";
 
+import StarsCanvas from "./components/StarsCanvas";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 
@@ -14,9 +15,14 @@ import Sun from "./assets/background/6Sun.svg";
 
 export default function Home() {
   return (
-    <div className="home-container">
+    <div className="home-container relative">
+      {/* Starry Background */}
+      <StarsCanvas />
+
+      {/* Header */}
       <Header />
 
+      {/* Parallax Background */}
       <div className="parallax">
         {/* Background Layers */}
         <img src={Stars} alt="stars" className="parallax__stars" />
@@ -43,7 +49,7 @@ export default function Home() {
             </div>
 
             {/* Right Side: Description */}
-            <div className="flex-1 flex justify-start lg:justify-end  sm:mt-14 ml-8 xs:ml-[-4vh] sm:ml-[-17vh] md:ml-[-26vh] lg:mt-10 2xl:mt-0">
+            <div className="flex-1 flex justify-start lg:justify-end sm:mt-14 ml-8 xs:ml-[-4vh] sm:ml-[-17vh] md:ml-[-26vh] lg:mt-10 2xl:mt-0">
               <div className="glowing-text font-bold text-[20px] sm:text-[30px] md:text-[36px] 2xl:text-[46px] sm:leading-[40px] md:leading-[50px] 2xl:leading-[60px] streaky-glow max-w-sm 2xl:max-w-lg text-white text-left">
                 I love creating <br /> creative solutions to the digital world.
               </div>
@@ -60,7 +66,15 @@ export default function Home() {
         </p>
       </div>
 
-      <Footer/>
+
+      <div>
+        <h1>
+          hi
+        </h1>
+      </div>
+
+      {/* Footer */}
+      <Footer />
     </div>
   );
 }

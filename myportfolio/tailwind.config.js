@@ -13,6 +13,9 @@ export default {
         primary: '#011825',
         
       },
+      zIndex: {
+        '-1': '-1',
+      },
     },
   },
   plugins: [flowbiteReact],
