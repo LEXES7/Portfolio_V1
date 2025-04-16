@@ -77,7 +77,7 @@ export default function About() {
                 >
                   <span
                     aria-label={`${tech.name} icon`}
-                    className="text-2xl text-yellow-600 dark:text-yellow-500 mr-2 transition duration-300"
+                    className="text-2xl text-gray-600 dark:text-gray-300 mr-2 transition duration-300"
                   >
                     {tech.icon}
                   </span>

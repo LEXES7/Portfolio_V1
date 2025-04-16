@@ -1,6 +1,8 @@
 import React from "react";
 import SpacemanCanvas from "./components/Spaceman";
 import Position from "./components/Position";
+import Projects from "./components/Projects.jsx";
+
 
 import StarsCanvas from "./components/StarsCanvas";
 import Header from "./components/Header";
@@ -69,6 +71,9 @@ export default function Home() {
 
       <div>
         <About />
+      </div>
+      <div>
+      <Projects />
       </div>
 
 
