@@ -3,6 +3,7 @@ import SpacemanCanvas from "./components/Spaceman";
 import Position from "./components/Position";
 
 import Header from "./components/Header";
+import Footer from "./components/Footer";
 
 import Stars from "./assets/background/1Stars.svg";
 import Planets from "./assets/background/2Planets.svg";
@@ -58,6 +59,8 @@ export default function Home() {
           Explore the universe of my work and creativity. Scroll down to learn more about my projects, skills, and experiences.
         </p>
       </div>
+
+      <Footer/>
     </div>
   );
 }
