@@ -8,7 +8,7 @@ export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   const navItems = [
-    { name: "Home", link: "home" }, // Use section IDs
+    { name: "Home", link: "home" }, 
     { name: "About", link: "about" },
     { name: "Projects", link: "projects" },
     { name: "Contact", link: "contact" },
@@ -17,7 +17,7 @@ export default function Header() {
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-gray-800 bg-opacity-90 backdrop-blur-lg shadow-md">
       <nav className="max-w-7xl mx-auto flex items-center justify-between px-6 py-4">
-        {/* Logo */}
+
         <ScrollLink
           to="home"
           smooth={true}
@@ -25,13 +25,13 @@ export default function Header() {
           className="flex items-center cursor-pointer"
         >
           <img
-            src="./src/assets/logo.svg" // Replace with your logo path
+            src="./src/assets/logo.svg" 
             alt="Logo"
             className="h-10 w-auto mr-3"
           />
         </ScrollLink>
 
-        {/* Desktop Navigation */}
+
         <div className="hidden lg:flex space-x-8">
           {navItems.map((item, index) => (
             <ScrollLink
@@ -46,7 +46,6 @@ export default function Header() {
           ))}
         </div>
 
-        {/* Mobile Menu Button */}
         <button
           className="lg:hidden text-white"
           onClick={() => setMobileMenuOpen(true)}
@@ -55,7 +54,6 @@ export default function Header() {
         </button>
       </nav>
 
-      {/* Mobile Menu */}
       <AnimatePresence>
         {mobileMenuOpen && (
           <motion.div
@@ -66,7 +64,7 @@ export default function Header() {
             transition={{ duration: 0.3 }}
           >
             <div className="flex flex-col h-full">
-              {/* Close Button */}
+
               <div className="flex items-center justify-between px-6 py-4">
                 <ScrollLink
                   to="home"
@@ -76,7 +74,7 @@ export default function Header() {
                   onClick={() => setMobileMenuOpen(false)}
                 >
                   <img
-                    src="/logo.svg" // Replace with your logo path
+                    src="/logo.svg"
                     alt="Logo"
                     className="h-8 w-auto mr-3"
                   />
@@ -90,7 +88,6 @@ export default function Header() {
                 </button>
               </div>
 
-              {/* Navigation Links */}
               <div className="flex flex-col items-center justify-center flex-grow space-y-6">
                 {navItems.map((item, index) => (
                   <ScrollLink

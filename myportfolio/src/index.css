@@ -109,8 +109,12 @@ canvas {
 
 .description-title {
   font-size: 2rem;
-  color: #f9d423;
-  font-weight: bold;
+  font-family: 'Poppins', sans-serif; /* Use Poppins font */
+  font-size: 3rem; /* Adjust size as needed */
+  font-weight: 700; /* Bold weight */
+  color: #ffffff; /* White color */
+  text-align: center;
+  text-shadow: 0 0 5px rgba(255, 255, 255, 0.5), 0 0 10px rgba(255, 255, 255, 0.3); /* Dim glow effect */
   margin-bottom: 1rem;
 }
 
