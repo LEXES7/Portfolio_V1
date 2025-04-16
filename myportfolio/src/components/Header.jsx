@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link as ScrollLink } from "react-scroll"; // Import Link from react-scroll
 import { IoMdClose } from "react-icons/io";
 import { IoMenu } from "react-icons/io5";
 import { motion, AnimatePresence } from "framer-motion";
@@ -8,34 +8,41 @@ export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   const navItems = [
-    { name: "Home", link: "/" },
-    { name: "About", link: "#about" },
-    { name: "Projects", link: "#projects" },
-    { name: "Contact", link: "#contact" },
+    { name: "Home", link: "home" }, // Use section IDs
+    { name: "About", link: "about" },
+    { name: "Projects", link: "projects" },
+    { name: "Contact", link: "contact" },
   ];
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-gray-800 bg-opacity-90 backdrop-blur-lg shadow-md">
       <nav className="max-w-7xl mx-auto flex items-center justify-between px-6 py-4">
         {/* Logo */}
-        <Link to="/" className="flex items-center">
+        <ScrollLink
+          to="home"
+          smooth={true}
+          duration={500}
+          className="flex items-center cursor-pointer"
+        >
           <img
             src="./src/assets/logo.svg" // Replace with your logo path
             alt="Logo"
             className="h-10 w-auto mr-3"
           />
-        </Link>
+        </ScrollLink>
 
         {/* Desktop Navigation */}
         <div className="hidden lg:flex space-x-8">
           {navItems.map((item, index) => (
-            <a
+            <ScrollLink
               key={index}
-              href={item.link}
-              className="text-white text-sm font-semibold hover:text-yellow-400 transition duration-300"
+              to={item.link}
+              smooth={true}
+              duration={500}
+              className="text-white text-sm font-semibold hover:text-yellow-400 transition duration-300 cursor-pointer"
             >
               {item.name}
-            </a>
+            </ScrollLink>
           ))}
         </div>
 
@@ -61,14 +68,20 @@ export default function Header() {
             <div className="flex flex-col h-full">
               {/* Close Button */}
               <div className="flex items-center justify-between px-6 py-4">
-                <Link to="/" className="flex items-center">
+                <ScrollLink
+                  to="home"
+                  smooth={true}
+                  duration={500}
+                  className="flex items-center cursor-pointer"
+                  onClick={() => setMobileMenuOpen(false)}
+                >
                   <img
                     src="/logo.svg" // Replace with your logo path
                     alt="Logo"
                     className="h-8 w-auto mr-3"
                   />
                   <span className="text-xl font-bold text-white">My Portfolio</span>
-                </Link>
+                </ScrollLink>
                 <button
                   className="text-white"
                   onClick={() => setMobileMenuOpen(false)}
@@ -80,14 +93,16 @@ export default function Header() {
               {/* Navigation Links */}
               <div className="flex flex-col items-center justify-center flex-grow space-y-6">
                 {navItems.map((item, index) => (
-                  <a
+                  <ScrollLink
                     key={index}
-                    href={item.link}
-                    className="text-white text-lg font-semibold hover:text-yellow-400 transition duration-300"
+                    to={item.link}
+                    smooth={true}
+                    duration={500}
+                    className="text-white text-lg font-semibold hover:text-yellow-400 transition duration-300 cursor-pointer"
                     onClick={() => setMobileMenuOpen(false)}
                   >
                     {item.name}
-                  </a>
+                  </ScrollLink>
                 ))}
               </div>
             </div>

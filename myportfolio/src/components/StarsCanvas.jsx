@@ -41,7 +41,7 @@ const StarsCanvas = () => (
   <div className="w-full h-full fixed inset-0 z-[-1]" style={{ backgroundColor: "#011825" }}>
     <Canvas
       camera={{ position: [0, 0, 1] }}
-      gl={{ alpha: true }} // Enable transparency
+      gl={{ alpha: true }} 
     >
       <Suspense fallback={null}>
         <StarBackground />
