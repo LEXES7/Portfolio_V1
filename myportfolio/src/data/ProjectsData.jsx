@@ -23,4 +23,28 @@ export const ProjectsData = [
       github: null,
       live: null,
     },
+    {
+      title: "AtmoSense",
+      description: "A weather app designed to help users to get to know about the weather in current location and also at any place of the world!.",
+      tags: ["Reactjs", "Vite","tailwind CSS", "OpenWeatherAPI"],
+      year: "2025",
+      github:"https://github.com/LEXES7/AtmoSense.git",
+      live: null,
+    },
+    {
+      title: "NET-SONIC",
+      description: "This is a network download speed upload speed monitor test web app project. It is designed to help users monitor their internet speed and performance in real-time.",
+      tags: ["TypeScript","tailwind CSS", "NextJS", "Vite"],
+      year: "2025",
+      github:"https://github.com/LEXES7/NET-SONIC.git",
+      live: null,
+    },
+     {
+      title: "Elder Care System",
+      description: "A MERN stack group project created for a elderly care organization .",
+      tags: ["React", "Express", "NodeJS", "Tailwind CSS", "MongoDB"],
+      year: "2024",
+      github: "https://github.com/LEXES7/IT_Project.git",
+      live: null,
+    },
 ];
