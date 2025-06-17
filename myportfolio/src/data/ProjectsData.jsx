@@ -29,7 +29,7 @@ export const ProjectsData = [
       tags: ["Reactjs", "Vite","tailwind CSS", "OpenWeatherAPI"],
       year: "2025",
       github:"https://github.com/LEXES7/AtmoSense.git",
-      live: null,
+      live: "https://atmo-sense.netlify.app/",
     },
     {
       title: "NET-SONIC",
@@ -39,12 +39,20 @@ export const ProjectsData = [
       github:"https://github.com/LEXES7/NET-SONIC.git",
       live: null,
     },
-     {
+    {
       title: "Elder Care System",
       description: "A MERN stack group project created for a elderly care organization .",
       tags: ["React", "Express", "NodeJS", "Tailwind CSS", "MongoDB"],
       year: "2024",
       github: "https://github.com/LEXES7/IT_Project.git",
+      live: null,
+    },
+     {
+      title: "MEDICENTER System",
+      description: "medicenter is a full featured medical center management web application developed with Django and React . It supports patient registration, doctor management, appointment scheduling, and electronic medical records, offering a seamless experience for healthcare administrators.",
+      tags: ["React", "mySQL", "Django", "Tailwind CSS", "JWT Authentication"],
+      year: "2025",
+      github: "https://github.com/LEXES7/Medi-CenterV1.git",
       live: null,
     },
 ];
