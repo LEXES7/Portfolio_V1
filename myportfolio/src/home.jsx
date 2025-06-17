@@ -3,6 +3,7 @@ import SpacemanCanvas from "./components/Spaceman";
 import Position from "./components/Position";
 import Projects from "./components/Projects.jsx";
 
+import Education from "./components/Education.jsx";
 
 import Contact from "./components/Contact.jsx";
 
@@ -74,9 +75,13 @@ export default function Home() {
       <div>
         <About />
       </div>
+   
       <div>
+        
       <Projects />
       </div>
+
+      <Education/>
 
       <div>
         <Contact />
