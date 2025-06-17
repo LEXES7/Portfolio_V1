@@ -7,15 +7,15 @@ const educationData = [
     id: 1,
     degree: "BSc (Hons) in Information Technology",
     institution: "Sri Lanka Institute of Information Technology (SLIIT)",
-    duration: "2021 - 2025",
-    description: "Specializing in Software Engineering with focus on web and mobile application development.",
+    duration: "2022 - 2026",
+    description: "Foundation studies in programming, data structures, and computer architecture.",
   },
   {
     id: 2,
-    degree: "Diploma in Computer Science",
-    institution: "SLIIT Academy",
-    duration: "2020 - 2021",
-    description: "Foundation studies in programming, data structures, and computer architecture.",
+    degree: "Diploma in English and Information Technology",
+    institution: "Esoft",
+    duration: "2022 - 2023",
+    description: "Foundation studies and practical skills in English communication and IT fundamentals.",
   }
 ];
 
