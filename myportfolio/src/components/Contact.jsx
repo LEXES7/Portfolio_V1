@@ -96,7 +96,6 @@ export default function Contact() {
           ))}
         </motion.div>
         
-        {/* Email contact */}
         <motion.div
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
@@ -106,7 +105,7 @@ export default function Contact() {
         >
           <p className="text-gray-300">Prefer email?</p>
           <a 
-            href="mailto:your.email@example.com" 
+            href="mailto:sachinthabhashithawork@gmail.com" 
             className="text-yellow-400 hover:text-yellow-300 font-medium text-lg inline-block mt-1 border-b-2 border-yellow-500 hover:border-yellow-300 transition-all duration-300"
           >
             sachinthabhashithawork@gmail.com
