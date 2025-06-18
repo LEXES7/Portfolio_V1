@@ -31,6 +31,29 @@ section[id] {
   position: relative;
 }
 
+/* FIXED: Mobile menu dropdown styles */
+@media (max-width: 1023px) {
+  .mobile-menu-wrapper {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 85%;
+    max-width: 320px;
+    display: flex;
+    flex-direction: column;
+    z-index: 101;
+    height: 100%;
+    overflow-y: auto;
+  }
+  
+  .mobile-menu-content {
+    flex: 1;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+}
+
 .touch-responsive {
   position: relative;
   width: 100%;
@@ -201,7 +224,6 @@ canvas {
 
 /* Modern timeline styling */
 .glow-line {
-  /* Replace solid line with gradient for modern look */
   background: linear-gradient(180deg, 
     rgba(249, 212, 35, 0.1) 0%, 
     rgba(249, 212, 35, 0.7) 15%, 
@@ -215,7 +237,6 @@ canvas {
 }
 
 .glow-dot {
-  /* More subtle, elegant dot */
   background: #f9d423; /* Solid color */
   box-shadow: 0 0 10px rgba(249, 212, 35, 0.6), 0 0 20px rgba(249, 212, 35, 0.3); /* Softer glow */
   width: 12px; /* Slightly larger dot */
@@ -223,24 +244,21 @@ canvas {
   border-radius: 50%;
   position: relative;
   z-index: 10;
-  
-  /* Add white inner circle for more modern look */
-  &::after {
-    content: '';
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 4px;
-    height: 4px;
-    background-color: white;
-    border-radius: 50%;
-  }
-  
-  /* Subtle animation */
-  animation: modernPulse 3s infinite;
 }
 
+.glow-dot::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 4px;
+  height: 4px;
+  background-color: white;
+  border-radius: 50%;
+}
+  
+/* Subtle animation */
 @keyframes modernPulse {
   0% {
     box-shadow: 0 0 0 0 rgba(249, 212, 35, 0.6);
@@ -251,6 +269,10 @@ canvas {
   100% {
     box-shadow: 0 0 0 0 rgba(249, 212, 35, 0);
   }
+}
+
+.glow-dot {
+  animation: modernPulse 3s infinite;
 }
 
 /* Spaceman component interaction fixes */
@@ -306,4 +328,29 @@ section {
 h1, h2, h3, h4, h5, h6 {
   line-height: 1.2;
   margin-bottom: 0.75em;
+}
+
+/* FIXED: Position component text animation container size */
+.position-container {
+  position: relative;
+  overflow: hidden;
+  min-height: 36px;
+}
+
+@media (min-width: 640px) {
+  .position-container {
+    min-height: 40px;
+  }
+}
+
+@media (min-width: 768px) {
+  .position-container {
+    min-height: 48px;
+  }
+}
+
+@media (min-width: 1536px) {
+  .position-container {
+    min-height: 70px;
+  }
 }
