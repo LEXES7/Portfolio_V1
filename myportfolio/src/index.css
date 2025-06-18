@@ -4,15 +4,25 @@
 
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
 
+/* Global styles with scroll behavior */
+html {
+  scroll-behavior: smooth;
+  height: 100%;
+}
 
-html,
 body {
   margin: 0;
   padding: 0;
   width: 100%;
   height: 100%;
-  overflow-x: hidden; 
-  
+  overflow-x: hidden;
+  font-family: 'Poppins', sans-serif;
+  scroll-padding-top: 80px; /* Adjust for fixed header */
+}
+
+/* Section scroll margin for header offset */
+section[id] {
+  scroll-margin-top: 80px;
 }
 
 #root {
@@ -25,6 +35,7 @@ body {
   position: relative;
   width: 100%;
   height: 100%;
+  isolation: isolate;
 }
 
 canvas {
@@ -35,9 +46,15 @@ canvas {
   width: 100%;
   height: 100%;
   z-index: 10;
-  pointer-events: auto; 
+  pointer-events: auto;
+  touch-action: none;
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
 }
 
+/* Glowing text effects */
 .glowing-text {
   animation: glow 2s infinite alternate;
 }
@@ -51,6 +68,7 @@ canvas {
   }
 }
 
+/* Parallax styling */
 .parallax {
   position: relative;
   height: 100vh; 
@@ -65,8 +83,10 @@ canvas {
 
 .parallax > img {
   width: 100%;
+  pointer-events: none; /* Prevent image interaction */
 }
 
+/* Parallax layer z-index order */
 .parallax__stars {
   z-index: 2;
 }
@@ -99,11 +119,11 @@ canvas {
   text-align: center;
 }
 
+/* Description box styling */
 .description-box {
   height: auto;
   padding: 2rem;
   text-align: center;
-
 }
 
 .description-title {
@@ -123,7 +143,7 @@ canvas {
   line-height: 1.6;
 }
 
-
+/* Text animation */
 @keyframes textRotate1 {
   0% {
     transform: rotateX(0deg);
@@ -143,7 +163,7 @@ canvas {
   animation: textRotate1 2s infinite ease-in-out;
 }
 
-
+/* Projects section styling */
 .myprojects-title {
   font-family: 'Poppins', sans-serif; 
   font-size: 3rem; 
@@ -154,6 +174,7 @@ canvas {
   margin-bottom: 2rem; 
 }
 
+/* Contact section styling */
 #contact h2 {
   font-family: 'Poppins', sans-serif;
   text-shadow: 0 0 5px rgba(255, 255, 255, 0.5), 0 0 10px rgba(255, 255, 255, 0.3);
@@ -166,7 +187,6 @@ canvas {
 #contact a:hover {
   transform: scale(1.2);
 }
-
 
 /* Education Section Styling */
 .education-title {
@@ -231,4 +251,59 @@ canvas {
   100% {
     box-shadow: 0 0 0 0 rgba(249, 212, 35, 0);
   }
+}
+
+/* Spaceman component interaction fixes */
+.spaceman-canvas {
+  touch-action: none;
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+}
+
+/* Pointer events control */
+.pointer-events-auto {
+  pointer-events: auto !important;
+}
+
+.pointer-events-none {
+  pointer-events: none !important;
+}
+
+/* Make sure sections have proper spacing */
+section {
+  min-height: 100vh; /* Ensure sections are at least full viewport height */
+  position: relative;
+  overflow: hidden;
+  padding-top: 2rem;
+}
+
+/* Section ID styling to ensure they work with scroll behavior */
+#home, #about, #education, #projects, #contact {
+  display: block;
+  position: relative;
+  visibility: visible;
+}
+
+/* Fix spaceman display on mobile */
+@media (max-width: 768px) {
+  .parallax {
+    height: 85vh; /* Slightly shorter on mobile */
+  }
+  
+  canvas {
+    height: 80% !important; /* Prevent canvas from taking too much space on mobile */
+  }
+}
+
+/* Ensure header navigation works with highlighting */
+.header-nav-active {
+  color: #facc15 !important; /* Yellow-400 */
+}
+
+/* Improved heading legibility */
+h1, h2, h3, h4, h5, h6 {
+  line-height: 1.2;
+  margin-bottom: 0.75em;
 }
