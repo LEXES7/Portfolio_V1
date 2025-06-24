@@ -2,6 +2,8 @@ import React from "react";
 import { IoHeart } from "react-icons/io5";
 import { FaGithub, FaLinkedin, FaInstagram, FaFacebook } from "react-icons/fa";
 import { Link as ScrollLink } from "react-scroll";
+import logosvg from "../assets/logo.svg";
+
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -45,7 +47,7 @@ const Footer = () => {
           {/* Left - Logo & About */}
           <div className="flex flex-col items-center md:items-start">
             <img 
-              src="/src/assets/logo.svg" 
+              src={logosvg}
               alt="Logo" 
               className="h-12 w-auto mb-4"
             />

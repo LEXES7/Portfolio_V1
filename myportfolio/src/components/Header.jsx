@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { IoMdClose } from "react-icons/io";
 import { IoMenu } from "react-icons/io5";
+import logosvg from "../assets/logo.svg";
 
 export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -110,7 +111,7 @@ export default function Header() {
             aria-label="Go to home section"
           >
             <img
-              src="/src/assets/logo.svg" 
+              src={logosvg}
               alt="Logo"
               className={`transition-all duration-300 ${scrolled ? "h-8" : "h-10"} w-auto`}
               loading="eager"
