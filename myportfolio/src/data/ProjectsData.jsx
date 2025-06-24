@@ -37,7 +37,7 @@ export const ProjectsData = [
       tags: ["TypeScript","tailwind CSS", "NextJS", "Vite"],
       year: "2025",
       github:"https://github.com/LEXES7/NET-SONIC.git",
-      live: null,
+      live: "https://netsonic.netlify.app",
     },
     {
       title: "Elder Care System",

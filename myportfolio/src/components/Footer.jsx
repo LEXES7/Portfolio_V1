@@ -42,9 +42,7 @@ const Footer = () => {
   return (
     <footer className="bg-gray-900 text-white pt-12 pb-6">
       <div className="container mx-auto px-4">
-        {/* Footer Top - Links & Social */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
-          {/* Left - Logo & About */}
           <div className="flex flex-col items-center md:items-start">
             <img 
               src={logosvg}
