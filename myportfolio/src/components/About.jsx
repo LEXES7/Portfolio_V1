@@ -1,12 +1,23 @@
 import React from "react";
 import { motion } from "framer-motion";
+import { HiDownload } from "react-icons/hi";
 import ProfileImage from "../assets/profile.jpeg"; 
-import { TechnologiesData } from "../data/TechnologiesData.jsx"; 
+import { TechnologiesData } from "../data/TechnologiesData.jsx";
+import ResumePDF from "../assets/ResumeSachinthaBhashitha.pdf";
 
 export default function About() {
   const techVariants = {
     hidden: { opacity: 0, scale: 0.9 },
     visible: { opacity: 1, scale: 1 },
+  };
+
+  const handleDownloadCV = () => {
+    const link = document.createElement('a');
+    link.href = ResumePDF;
+    link.download = 'Sachintha_Bhashitha_Resume.pdf';
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
   };
 
   return (
@@ -28,6 +39,20 @@ export default function About() {
             <h2 className="text-4xl text-white font-bold">
               About Me
             </h2>
+            
+            {/* Download CV */}
+            <motion.button
+              onClick={handleDownloadCV}
+              initial={{ opacity: 0, y: 10 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.3 }}
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              className="mt-6 inline-flex items-center px-6 py-3 bg-yellow-500 hover:bg-yellow-600 text-gray-900 font-semibold rounded-lg shadow-lg transition-all duration-300 transform hover:shadow-xl group"
+            >
+              <HiDownload className="mr-2 text-lg group-hover:animate-bounce" />
+              Download CV
+            </motion.button>
           </motion.div>
 
           <div className="flex flex-col lg:flex-row items-center justify-between">
